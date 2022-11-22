@@ -14,15 +14,25 @@ const fetchimage = async ()=>{
 
 async function addCat(){
   console.log("start");
+
   const url = await fetchimage();
   console.log(url);
+
   const h1 = document.createElement("h1");
   h1.innerText = "Kitten Pic";
+
   const image = document.createElement("img");
-  // image.setAttribute("src", "https://thecatapi.com/");
   image.src = url;
+  image.style.width = "800px"
+
+
 
   document.body.append(h1, image);
+  document.body.style.display = "flex";
+  document.body.style.flexDirection = "column";
+  document.body.style.alignItems = "center"
+
+
 }
 
 
